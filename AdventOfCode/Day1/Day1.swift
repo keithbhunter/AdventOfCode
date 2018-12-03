@@ -15,9 +15,8 @@ struct Day1 {
     
     /// Inits with the input data for AOC.
     init() {
-        let data = Bundle.main.data(forTextResource: "day1-input")
-        let str = String(data: data, encoding: .utf8)
-        frequencyChanges = str!.components(separatedBy: "\n").compactMap { Int($0) }
+        let str = Bundle.main.string(forTextResource: "day1-input")
+        frequencyChanges = str.components(separatedBy: "\n").compactMap { Int($0) }
     }
     
     /// Helper init for test data injection with smaller examples.

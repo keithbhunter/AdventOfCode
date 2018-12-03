@@ -14,9 +14,8 @@ class Day2 {
     
     /// Inits with the input data for AOC.
     init() {
-        let data = Bundle.main.data(forTextResource: "day2-input")
-        let str = String(data: data, encoding: .utf8)
-        ids = str!.components(separatedBy: "\n")
+        let str = Bundle.main.string(forTextResource: "day2-input")
+        ids = str.components(separatedBy: "\n")
     }
     
     /// Helper init for test data injection with smaller examples.

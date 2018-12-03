@@ -10,9 +10,10 @@ import Foundation
 
 extension Bundle {
     
-    func data(forTextResource resource: String) -> Data {
+    func string(forTextResource resource: String) -> String {
         let url = Bundle.main.url(forResource: resource, withExtension: "txt")!
-        return try! Data(contentsOf: url)
+        let data = try! Data(contentsOf: url)
+        return String(data: data, encoding: .utf8)!.trimmingCharacters(in: .newlines)
     }
     
 }
