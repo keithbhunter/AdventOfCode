@@ -12,10 +12,10 @@
 		E7C97F3621B477540044A828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C97F3421B477540044A828 /* Main.storyboard */; };
 		E7C97F3821B477560044A828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C97F3721B477560044A828 /* Assets.xcassets */; };
 		E7C97F3B21B477560044A828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C97F3921B477560044A828 /* LaunchScreen.storyboard */; };
-		E7C97F4621B477560044A828 /* AdventOfCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C97F4521B477560044A828 /* AdventOfCodeTests.swift */; };
 		E7C97F5121B477560044A828 /* AdventOfCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C97F5021B477560044A828 /* AdventOfCodeUITests.swift */; };
-		E7C97F5F21B477BB0044A828 /* input.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7C97F5E21B477BB0044A828 /* input.txt */; };
+		E7C97F5F21B477BB0044A828 /* day1-input.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7C97F5E21B477BB0044A828 /* day1-input.txt */; };
 		E7C97F6121B477D40044A828 /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C97F6021B477D40044A828 /* Day1.swift */; };
+		E7C97F6321B4BE470044A828 /* Day1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C97F6221B4BE470044A828 /* Day1Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,13 +44,13 @@
 		E7C97F3A21B477560044A828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7C97F3C21B477560044A828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7C97F4121B477560044A828 /* AdventOfCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdventOfCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7C97F4521B477560044A828 /* AdventOfCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventOfCodeTests.swift; sourceTree = "<group>"; };
 		E7C97F4721B477560044A828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7C97F4C21B477560044A828 /* AdventOfCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdventOfCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C97F5021B477560044A828 /* AdventOfCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventOfCodeUITests.swift; sourceTree = "<group>"; };
 		E7C97F5221B477560044A828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7C97F5E21B477BB0044A828 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		E7C97F5E21B477BB0044A828 /* day1-input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "day1-input.txt"; sourceTree = "<group>"; };
 		E7C97F6021B477D40044A828 /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
+		E7C97F6221B4BE470044A828 /* Day1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +101,13 @@
 		E7C97F2F21B477540044A828 /* AdventOfCode */ = {
 			isa = PBXGroup;
 			children = (
+				E7C97F6421B4BE610044A828 /* Day1 */,
 				E7C97F3021B477540044A828 /* AppDelegate.swift */,
 				E7C97F3221B477540044A828 /* ViewController.swift */,
 				E7C97F3421B477540044A828 /* Main.storyboard */,
 				E7C97F3721B477560044A828 /* Assets.xcassets */,
 				E7C97F3921B477560044A828 /* LaunchScreen.storyboard */,
 				E7C97F3C21B477560044A828 /* Info.plist */,
-				E7C97F5E21B477BB0044A828 /* input.txt */,
-				E7C97F6021B477D40044A828 /* Day1.swift */,
 			);
 			path = AdventOfCode;
 			sourceTree = "<group>";
@@ -116,7 +115,7 @@
 		E7C97F4421B477560044A828 /* AdventOfCodeTests */ = {
 			isa = PBXGroup;
 			children = (
-				E7C97F4521B477560044A828 /* AdventOfCodeTests.swift */,
+				E7C97F6221B4BE470044A828 /* Day1Tests.swift */,
 				E7C97F4721B477560044A828 /* Info.plist */,
 			);
 			path = AdventOfCodeTests;
@@ -129,6 +128,15 @@
 				E7C97F5221B477560044A828 /* Info.plist */,
 			);
 			path = AdventOfCodeUITests;
+			sourceTree = "<group>";
+		};
+		E7C97F6421B4BE610044A828 /* Day1 */ = {
+			isa = PBXGroup;
+			children = (
+				E7C97F5E21B477BB0044A828 /* day1-input.txt */,
+				E7C97F6021B477D40044A828 /* Day1.swift */,
+			);
+			path = Day1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +246,7 @@
 				E7C97F3B21B477560044A828 /* LaunchScreen.storyboard in Resources */,
 				E7C97F3821B477560044A828 /* Assets.xcassets in Resources */,
 				E7C97F3621B477540044A828 /* Main.storyboard in Resources */,
-				E7C97F5F21B477BB0044A828 /* input.txt in Resources */,
+				E7C97F5F21B477BB0044A828 /* day1-input.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7C97F4621B477560044A828 /* AdventOfCodeTests.swift in Sources */,
+				E7C97F6321B4BE470044A828 /* Day1Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
