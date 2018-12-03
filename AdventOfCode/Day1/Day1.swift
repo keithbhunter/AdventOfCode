@@ -15,8 +15,7 @@ struct Day1 {
     
     /// Inits with the input data for AOC.
     init() {
-        let url = Bundle.main.url(forResource: "day1-input", withExtension: "txt")!
-        let data = try! Data(contentsOf: url)
+        let data = Bundle.main.data(forTextResource: "day1-input")
         let str = String(data: data, encoding: .utf8)
         frequencyChanges = str!.components(separatedBy: "\n").compactMap { Int($0) }
     }
