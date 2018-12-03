@@ -46,4 +46,44 @@ class Day2 {
         return twoLetterMatches * threeLetterMatches
     }
     
+    func findIDsWithOneCharacterDifference() -> String? {
+        for i in 0 ..< ids.count {
+            for j in 1 ..< ids.count {
+                var one = ids[i]
+                let two = ids[j]
+                
+                if one.numberOfDifferingCharacters(in: two) == 1 {
+                    one.remove(at: one.indexOfDifferentCharacter(in: two)!)
+                    return one
+                }
+            }
+        }
+        
+        return nil
+    }
+    
+}
+
+private extension String {
+    
+    func numberOfDifferingCharacters(in other: String) -> Int {
+        var differences = 0
+        for (one, two) in zip(self, other) where one != two {
+            differences += 1
+        }
+        return differences
+    }
+    
+    func indexOfDifferentCharacter(in other: String) -> Index? {
+        for i in 0 ..< self.count {
+            let index = self.index(self.startIndex, offsetBy: i)
+            
+            if self[index] != other[index] {
+                return index
+            }
+        }
+        
+        return nil
+    }
+    
 }

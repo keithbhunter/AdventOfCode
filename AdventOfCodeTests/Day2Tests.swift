@@ -20,5 +20,15 @@ class Day2Tests: XCTestCase {
         let checksum = Day2().calculateChecksum()
         XCTAssertEqual(checksum, 5750)
     }
+    
+    func testDay2Part2Example() {
+        let chars = Day2(ids: ["abcde", "fghij", "klmno", "pqrst", "fguij", "axcye", "wvxyz"]).findIDsWithOneCharacterDifference()
+        XCTAssertEqual(chars, "fgij")
+    }
+    
+    func testDay2Part2() {
+        let chars = Day2().findIDsWithOneCharacterDifference()
+        XCTAssertEqual(chars, "tzyvunogzariwkpcbdewmjhxi")
+    }
 
 }
