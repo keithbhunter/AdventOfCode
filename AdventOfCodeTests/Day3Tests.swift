@@ -10,7 +10,7 @@ import XCTest
 @testable import AdventOfCode
 
 class Day3Tests: XCTestCase {
-
+    
     func testClaimInit() {
         XCTAssertEqual(Claim(string: "#123 @ 3,2: 5x4"), Claim(id: 123, frame: Claim.Rect(x: 3, y: 2, width: 5, height: 4)))
     }
@@ -23,6 +23,11 @@ class Day3Tests: XCTestCase {
     func testDay3Part1() {
         let inchesWithMultipleClaims = Day3().findContestedSquareInches()
         XCTAssertEqual(inchesWithMultipleClaims, 101469)
+    }
+    
+    func testDay3Part2() {
+        let claim = Day3().findUncontestedClaim()
+        XCTAssertEqual(claim!.id, 1067)
     }
 
 }

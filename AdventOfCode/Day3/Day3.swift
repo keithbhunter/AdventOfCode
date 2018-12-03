@@ -13,7 +13,7 @@ class Day3 {
     private typealias Row = Int
     private typealias Column = Int
     
-    private var claims = [Claim]()
+    private let claims: [Claim]
     
     /// Inits with the input data for AOC.
     init() {
@@ -27,6 +27,35 @@ class Day3 {
     }
     
     func findContestedSquareInches() -> Int {
+        return generateHeatMap().reduce(0, { (result, arg1) -> Int in
+            let (_, columnCount) = arg1
+            return result + columnCount.filter { $0.value > 1 }.count
+        })
+    }
+    
+    func findUncontestedClaim() -> Claim? {
+        let heatMap = generateHeatMap()
+        
+        for claim in claims {
+            var claimIsContested = false
+            
+            for row in claim.frame.x ..< claim.frame.x + claim.frame.width {
+                for column in claim.frame.y ..< claim.frame.y + claim.frame.height {
+                    if heatMap[row]![column]! > 1 {
+                        claimIsContested = true
+                    }
+                }
+            }
+            
+            if !claimIsContested {
+                return claim
+            }
+        }
+        
+        return nil
+    }
+    
+    private func generateHeatMap() -> [Row : [Column : Int]] {
         var heatMap = [Row : [Column : Int]]()
         
         for claim in claims {
@@ -47,10 +76,7 @@ class Day3 {
             }
         }
         
-        return heatMap.reduce(0, { (result, arg1) -> Int in
-            let (_, columnCount) = arg1
-            return result + columnCount.filter { $0.value > 1 }.count
-        })
+        return heatMap
     }
     
 }
