@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E719465421B75CDD00F3DA4E /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = E719465321B75CDD00F3DA4E /* Day4.swift */; };
+		E719465721B75CFE00F3DA4E /* day4-input.txt in Resources */ = {isa = PBXBuildFile; fileRef = E719465621B75CFE00F3DA4E /* day4-input.txt */; };
+		E719465921B75D1200F3DA4E /* Day4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E719465821B75D1200F3DA4E /* Day4Tests.swift */; };
+		E719465B21B75D2E00F3DA4E /* SecurityGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E719465A21B75D2E00F3DA4E /* SecurityGuard.swift */; };
+		E75514CF21B833380094FEEE /* SecurityGuardStringProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75514CE21B833380094FEEE /* SecurityGuardStringProcessor.swift */; };
 		E7C97F3121B477540044A828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C97F3021B477540044A828 /* AppDelegate.swift */; };
 		E7C97F3321B477540044A828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C97F3221B477540044A828 /* ViewController.swift */; };
 		E7C97F3621B477540044A828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C97F3421B477540044A828 /* Main.storyboard */; };
@@ -44,6 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E719465321B75CDD00F3DA4E /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
+		E719465621B75CFE00F3DA4E /* day4-input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "day4-input.txt"; sourceTree = "<group>"; };
+		E719465821B75D1200F3DA4E /* Day4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4Tests.swift; sourceTree = "<group>"; };
+		E719465A21B75D2E00F3DA4E /* SecurityGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityGuard.swift; sourceTree = "<group>"; };
+		E75514CE21B833380094FEEE /* SecurityGuardStringProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityGuardStringProcessor.swift; sourceTree = "<group>"; };
 		E7C97F2D21B477540044A828 /* AdventOfCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventOfCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C97F3021B477540044A828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7C97F3221B477540044A828 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +104,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E719465521B75CE700F3DA4E /* Day4 */ = {
+			isa = PBXGroup;
+			children = (
+				E719465621B75CFE00F3DA4E /* day4-input.txt */,
+				E719465321B75CDD00F3DA4E /* Day4.swift */,
+				E719465A21B75D2E00F3DA4E /* SecurityGuard.swift */,
+				E75514CE21B833380094FEEE /* SecurityGuardStringProcessor.swift */,
+			);
+			path = Day4;
+			sourceTree = "<group>";
+		};
 		E7C97F2421B477540044A828 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +141,7 @@
 				E7C97F6421B4BE610044A828 /* Day1 */,
 				E7C97F6521B5C14C0044A828 /* Day2 */,
 				E7C97F6E21B5D2F30044A828 /* Day3 */,
+				E719465521B75CE700F3DA4E /* Day4 */,
 				E7C97F3021B477540044A828 /* AppDelegate.swift */,
 				E7C97F3221B477540044A828 /* ViewController.swift */,
 				E7C97F6821B5C1A60044A828 /* Bundle+AOC.swift */,
@@ -134,10 +156,11 @@
 		E7C97F4421B477560044A828 /* AdventOfCodeTests */ = {
 			isa = PBXGroup;
 			children = (
+				E7C97F4721B477560044A828 /* Info.plist */,
 				E7C97F6221B4BE470044A828 /* Day1Tests.swift */,
 				E7C97F6C21B5C2B50044A828 /* Day2Tests.swift */,
-				E7C97F4721B477560044A828 /* Info.plist */,
 				E7C97F7121B5D3360044A828 /* Day3Tests.swift */,
+				E719465821B75D1200F3DA4E /* Day4Tests.swift */,
 			);
 			path = AdventOfCodeTests;
 			sourceTree = "<group>";
@@ -283,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E719465721B75CFE00F3DA4E /* day4-input.txt in Resources */,
 				E7C97F7421B5D5FE0044A828 /* day3-input.txt in Resources */,
 				E7C97F3B21B477560044A828 /* LaunchScreen.storyboard in Resources */,
 				E7C97F3821B477560044A828 /* Assets.xcassets in Resources */,
@@ -313,10 +337,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E719465421B75CDD00F3DA4E /* Day4.swift in Sources */,
 				E7C97F7621B5D6070044A828 /* Day3.swift in Sources */,
 				E7C97F3321B477540044A828 /* ViewController.swift in Sources */,
 				E7C97F6B21B5C23E0044A828 /* Day2.swift in Sources */,
+				E719465B21B75D2E00F3DA4E /* SecurityGuard.swift in Sources */,
 				E7C97F6121B477D40044A828 /* Day1.swift in Sources */,
+				E75514CF21B833380094FEEE /* SecurityGuardStringProcessor.swift in Sources */,
 				E7C97F3121B477540044A828 /* AppDelegate.swift in Sources */,
 				E7C97F7021B5D3010044A828 /* Claim.swift in Sources */,
 				E7C97F6921B5C1A60044A828 /* Bundle+AOC.swift in Sources */,
@@ -330,6 +357,7 @@
 				E7C97F6321B4BE470044A828 /* Day1Tests.swift in Sources */,
 				E7C97F6D21B5C2B50044A828 /* Day2Tests.swift in Sources */,
 				E7C97F7221B5D3360044A828 /* Day3Tests.swift in Sources */,
+				E719465921B75D1200F3DA4E /* Day4Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
