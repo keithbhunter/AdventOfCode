@@ -12,6 +12,9 @@
 		E719465921B75D1200F3DA4E /* Day4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E719465821B75D1200F3DA4E /* Day4Tests.swift */; };
 		E719465B21B75D2E00F3DA4E /* SecurityGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E719465A21B75D2E00F3DA4E /* SecurityGuard.swift */; };
 		E75514CF21B833380094FEEE /* SecurityGuardStringProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75514CE21B833380094FEEE /* SecurityGuardStringProcessor.swift */; };
+		E75514D121BAE02E0094FEEE /* Day5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75514D021BAE02E0094FEEE /* Day5Tests.swift */; };
+		E75514D421BAE1790094FEEE /* Day5.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75514D321BAE1790094FEEE /* Day5.swift */; };
+		E75514D621BAE1A10094FEEE /* day5-input.txt in Resources */ = {isa = PBXBuildFile; fileRef = E75514D521BAE1A10094FEEE /* day5-input.txt */; };
 		E7C97F3121B477540044A828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C97F3021B477540044A828 /* AppDelegate.swift */; };
 		E7C97F3321B477540044A828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C97F3221B477540044A828 /* ViewController.swift */; };
 		E7C97F3621B477540044A828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C97F3421B477540044A828 /* Main.storyboard */; };
@@ -54,6 +57,9 @@
 		E719465821B75D1200F3DA4E /* Day4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4Tests.swift; sourceTree = "<group>"; };
 		E719465A21B75D2E00F3DA4E /* SecurityGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityGuard.swift; sourceTree = "<group>"; };
 		E75514CE21B833380094FEEE /* SecurityGuardStringProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityGuardStringProcessor.swift; sourceTree = "<group>"; };
+		E75514D021BAE02E0094FEEE /* Day5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day5Tests.swift; sourceTree = "<group>"; };
+		E75514D321BAE1790094FEEE /* Day5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day5.swift; sourceTree = "<group>"; };
+		E75514D521BAE1A10094FEEE /* day5-input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "day5-input.txt"; sourceTree = "<group>"; };
 		E7C97F2D21B477540044A828 /* AdventOfCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventOfCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C97F3021B477540044A828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7C97F3221B477540044A828 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +121,15 @@
 			path = Day4;
 			sourceTree = "<group>";
 		};
+		E75514D221BAE16A0094FEEE /* Day5 */ = {
+			isa = PBXGroup;
+			children = (
+				E75514D521BAE1A10094FEEE /* day5-input.txt */,
+				E75514D321BAE1790094FEEE /* Day5.swift */,
+			);
+			path = Day5;
+			sourceTree = "<group>";
+		};
 		E7C97F2421B477540044A828 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +157,7 @@
 				E7C97F6521B5C14C0044A828 /* Day2 */,
 				E7C97F6E21B5D2F30044A828 /* Day3 */,
 				E719465521B75CE700F3DA4E /* Day4 */,
+				E75514D221BAE16A0094FEEE /* Day5 */,
 				E7C97F3021B477540044A828 /* AppDelegate.swift */,
 				E7C97F3221B477540044A828 /* ViewController.swift */,
 				E7C97F6821B5C1A60044A828 /* Bundle+AOC.swift */,
@@ -161,6 +177,7 @@
 				E7C97F6C21B5C2B50044A828 /* Day2Tests.swift */,
 				E7C97F7121B5D3360044A828 /* Day3Tests.swift */,
 				E719465821B75D1200F3DA4E /* Day4Tests.swift */,
+				E75514D021BAE02E0094FEEE /* Day5Tests.swift */,
 			);
 			path = AdventOfCodeTests;
 			sourceTree = "<group>";
@@ -310,6 +327,7 @@
 				E7C97F7421B5D5FE0044A828 /* day3-input.txt in Resources */,
 				E7C97F3B21B477560044A828 /* LaunchScreen.storyboard in Resources */,
 				E7C97F3821B477560044A828 /* Assets.xcassets in Resources */,
+				E75514D621BAE1A10094FEEE /* day5-input.txt in Resources */,
 				E7C97F3621B477540044A828 /* Main.storyboard in Resources */,
 				E7C97F6721B5C15D0044A828 /* day2-input.txt in Resources */,
 				E7C97F5F21B477BB0044A828 /* day1-input.txt in Resources */,
@@ -339,6 +357,7 @@
 			files = (
 				E719465421B75CDD00F3DA4E /* Day4.swift in Sources */,
 				E7C97F7621B5D6070044A828 /* Day3.swift in Sources */,
+				E75514D421BAE1790094FEEE /* Day5.swift in Sources */,
 				E7C97F3321B477540044A828 /* ViewController.swift in Sources */,
 				E7C97F6B21B5C23E0044A828 /* Day2.swift in Sources */,
 				E719465B21B75D2E00F3DA4E /* SecurityGuard.swift in Sources */,
@@ -358,6 +377,7 @@
 				E7C97F6D21B5C2B50044A828 /* Day2Tests.swift in Sources */,
 				E7C97F7221B5D3360044A828 /* Day3Tests.swift in Sources */,
 				E719465921B75D1200F3DA4E /* Day4Tests.swift in Sources */,
+				E75514D121BAE02E0094FEEE /* Day5Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

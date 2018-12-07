@@ -38,7 +38,7 @@ class Day4 {
         }.first!
     }
     
-    func findMinuteAsleepMost(of secGuard: SecurityGuard) -> Int {
+    func findMinuteAsleepMost(of secGuard: SecurityGuard) -> (minute: Int, count: Int) {
         var minuteCounts = [Int](repeating: 0, count: 60)
         
         for interval in secGuard.sleepIntervals {
@@ -50,7 +50,14 @@ class Day4 {
             }
         }
         
-        return minuteCounts.firstIndex(of: minuteCounts.max()!)!
+        let count = minuteCounts.max()!
+        return (minute: minuteCounts.firstIndex(of: count)!, count: count)
+    }
+    
+    func findMinuteAsleepMostOfAllGuards() -> (secGuard: SecurityGuard, minute: Int) {
+        let minutes = guards.map { findMinuteAsleepMost(of: $0) }
+        let guardAndMinutes = zip(guards, minutes).sorted(by: { $0.1.count > $1.1.count }).first!
+        return (secGuard: guardAndMinutes.0, minute: guardAndMinutes.1.minute)
     }
     
 }

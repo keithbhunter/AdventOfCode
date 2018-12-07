@@ -8,10 +8,12 @@
 
 import Foundation
 
-class SecurityGuard {
+class SecurityGuard: CustomStringConvertible {
     
     let id: Int
     var sleepIntervals = [DateInterval]()
+    
+    var description: String { return "<SecurityGuard: \(id)>" }
     
     init(id: Int) {
         self.id = id

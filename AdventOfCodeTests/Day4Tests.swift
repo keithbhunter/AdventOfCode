@@ -10,7 +10,25 @@ import XCTest
 @testable import AdventOfCode
 
 class Day4Tests: XCTestCase {
-
+    
+    private let exampleInput = ["[1518-11-01 00:00] Guard #10 begins shift",
+                                "[1518-11-01 00:05] falls asleep",
+                                "[1518-11-01 00:25] wakes up",
+                                "[1518-11-01 00:30] falls asleep",
+                                "[1518-11-01 00:55] wakes up",
+                                "[1518-11-01 23:58] Guard #99 begins shift",
+                                "[1518-11-02 00:40] falls asleep",
+                                "[1518-11-02 00:50] wakes up",
+                                "[1518-11-03 00:05] Guard #10 begins shift",
+                                "[1518-11-03 00:24] falls asleep",
+                                "[1518-11-03 00:29] wakes up",
+                                "[1518-11-04 00:02] Guard #99 begins shift",
+                                "[1518-11-04 00:36] falls asleep",
+                                "[1518-11-04 00:46] wakes up",
+                                "[1518-11-05 00:03] Guard #99 begins shift",
+                                "[1518-11-05 00:45] falls asleep",
+                                "[1518-11-05 00:55] wakes up"]
+    
     func testDateFromInputString() {
         let calendar = Calendar(identifier: .gregorian)
         
@@ -65,31 +83,13 @@ class Day4Tests: XCTestCase {
     }
     
     func testDay4Part1Example() {
-        let input = ["[1518-11-01 00:00] Guard #10 begins shift",
-                     "[1518-11-01 00:05] falls asleep",
-                     "[1518-11-01 00:25] wakes up",
-                     "[1518-11-01 00:30] falls asleep",
-                     "[1518-11-01 00:55] wakes up",
-                     "[1518-11-01 23:58] Guard #99 begins shift",
-                     "[1518-11-02 00:40] falls asleep",
-                     "[1518-11-02 00:50] wakes up",
-                     "[1518-11-03 00:05] Guard #10 begins shift",
-                     "[1518-11-03 00:24] falls asleep",
-                     "[1518-11-03 00:29] wakes up",
-                     "[1518-11-04 00:02] Guard #99 begins shift",
-                     "[1518-11-04 00:36] falls asleep",
-                     "[1518-11-04 00:46] wakes up",
-                     "[1518-11-05 00:03] Guard #99 begins shift",
-                     "[1518-11-05 00:45] falls asleep",
-                     "[1518-11-05 00:55] wakes up"]
-        
-        let day4 = Day4(events: input)
+        let day4 = Day4(events: exampleInput)
         let secGuard = day4.findGuardWhoSleepsMost()
         let minute = day4.findMinuteAsleepMost(of: secGuard)
         
         XCTAssertEqual(secGuard.id, 10)
-        XCTAssertEqual(minute, 24)
-        XCTAssertEqual(secGuard.id * minute, 240)
+        XCTAssertEqual(minute.minute, 24)
+        XCTAssertEqual(secGuard.id * minute.minute, 240)
     }
     
     func testDay4Part1() {
@@ -97,7 +97,19 @@ class Day4Tests: XCTestCase {
         let secGuard = day4.findGuardWhoSleepsMost()
         let minute = day4.findMinuteAsleepMost(of: secGuard)
         
-        XCTAssertEqual(secGuard.id * minute, 48680)
+        XCTAssertEqual(secGuard.id * minute.minute, 48680)
+    }
+    
+    func testDay4Part2Example() {
+        let answer = Day4(events: exampleInput).findMinuteAsleepMostOfAllGuards()
+        XCTAssertEqual(answer.secGuard.id, 99)
+        XCTAssertEqual(answer.minute, 45)
+        XCTAssertEqual(answer.secGuard.id * answer.minute, 4455)
+    }
+    
+    func testDay4Part2() {
+        let answer = Day4().findMinuteAsleepMostOfAllGuards()        
+        XCTAssertEqual(answer.secGuard.id * answer.minute, 94826)
     }
 
 }
