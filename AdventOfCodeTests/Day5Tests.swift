@@ -22,4 +22,28 @@ class Day5Tests: XCTestCase {
         XCTAssertEqual(result.count, 9390)
     }
     
+    func testDay5Part2Example() {
+        let removingA = Day5(input: "dabAcCaCBAcCcaDA", removingPolymer: "a").triggerPolymer()
+        let removingB = Day5(input: "dabAcCaCBAcCcaDA", removingPolymer: "b").triggerPolymer()
+        let removingC = Day5(input: "dabAcCaCBAcCcaDA", removingPolymer: "c").triggerPolymer()
+        let removingD = Day5(input: "dabAcCaCBAcCcaDA", removingPolymer: "d").triggerPolymer()
+        
+        XCTAssertEqual(removingA.count, 6)
+        XCTAssertEqual(removingB.count, 8)
+        XCTAssertEqual(removingC.count, 4)
+        XCTAssertEqual(removingD.count, 6)
+    }
+    
+    func testDay5Part2() {
+        var lowestCount = Int.max
+        for char in "abcdefghijklmnopqrstuvwxyz" {
+            let result = Day5(removingPolymer: char).triggerPolymer()
+            if result.count < lowestCount {
+                lowestCount = result.count
+            }
+        }
+        
+        XCTAssertEqual(lowestCount, 0)  
+    }
+    
 }

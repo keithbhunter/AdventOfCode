@@ -13,14 +13,24 @@ class Day5 {
     private let polymer: String
     
     /// Inits with the input data for AOC.
-    init() {
+    init(removingPolymer char: Character? = nil) {
         let str = Bundle.main.string(forTextResource: "day5-input")
-        polymer = str.trimmingCharacters(in: .newlines)
+        let original = str.trimmingCharacters(in: .newlines)
+        
+        if let char = char {
+            polymer = original.replacingOccurrences(of: String(char), with: "", options: .caseInsensitive)
+        } else {
+            polymer = original
+        }
     }
     
     /// Helper init for test data injection with smaller examples.
-    init(input: String) {
-        polymer = input
+    init(input: String, removingPolymer char: Character? = nil) {
+        if let char = char {
+            polymer = input.replacingOccurrences(of: String(char), with: "", options: .caseInsensitive)
+        } else {
+            polymer = input
+        }
     }
     
     func triggerPolymer() -> String {
