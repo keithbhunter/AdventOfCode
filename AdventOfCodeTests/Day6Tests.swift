@@ -11,7 +11,7 @@ import XCTest
 
 class Day6Tests: XCTestCase {
     
-    func testDay6FindFiniteLetters() {
+    func testDay6ExampleFindFiniteLetters() {
         let a = Point(1, 1)
         let b = Point(1, 6)
         let c = Point(8, 3)
@@ -23,7 +23,7 @@ class Day6Tests: XCTestCase {
         XCTAssertEqual(Set(finitePoints), Set([e, d]))
     }
     
-    func testDay6BoundingBox() {
+    func testDay6ExampleBoundingBox() {
         let a = Point(1, 1)
         let b = Point(1, 6)
         let c = Point(8, 3)
@@ -45,8 +45,21 @@ class Day6Tests: XCTestCase {
         let e = Point(5, 5)
         let f = Point(8, 9)
         
-        let area = Day6(input: [a, b, c, d, e, f]).largestFiniteArea()
-        XCTAssertEqual(area, 17)
+        let result = Day6(input: [a, b, c, d, e, f]).largestFiniteArea()
+        XCTAssertEqual(result.point, e)
+        XCTAssertEqual(result.area, 17)
+    }
+    
+    func testDay6BoundingBox() {
+        let box = Day6().boundingBox()
+        let expected = (min: Point(40, 42), max: Point(358, 350))
+        XCTAssertEqual(box.min, expected.min)
+        XCTAssertEqual(box.max, expected.max)
+    }
+    
+    func testDay6Part1() {
+        let result = Day6().largestFiniteArea()
+        XCTAssertEqual(result.area, 4290)
     }
     
 }

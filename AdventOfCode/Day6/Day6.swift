@@ -8,10 +8,12 @@
 
 import Foundation
 
-struct Point: Hashable {
+struct Point: Hashable, CustomStringConvertible {
     
     var x: Int
     var y: Int
+    
+    var description: String { return "(\(x),\(y))" }
     
     init(_ x: Int, _ y: Int) {
         self.x = x
@@ -27,6 +29,16 @@ struct Point: Hashable {
 class Day6 {
     
     private let points: [Point]
+    
+    init() {
+        let str = Bundle.main.string(forTextResource: "day6-input")
+        let lines = str.components(separatedBy: "\n")
+        
+        points = lines.map { line in
+            let components = line.components(separatedBy: ", ")
+            return Point(Int(components[0])!, Int(components[1])!)
+        }
+    }
     
     init(input: [Point]) {
         points = input
@@ -72,12 +84,12 @@ class Day6 {
         return (Point(minX, minY), Point(maxX, maxY))
     }
     
-    func largestFiniteArea() -> Int {
+    func calculateClosestPoints(padding: Int = 0) -> [Point : Point] {
         let box = boundingBox()
         var closestPoints = [Point : Point]()
         
-        for x in box.min.x ... box.max.x {
-            for y in box.min.y ... box.max.y {
+        for x in box.min.x - padding ... box.max.x + padding {
+            for y in box.min.y - padding ... box.max.y + padding {
                 let point = Point(x, y)
                 let distances = points.map { $0.manhattanDistance(to: point) }
                 
@@ -93,13 +105,26 @@ class Day6 {
             }
         }
         
+        return closestPoints
+    }
+    
+    func largestFiniteArea() -> (point: Point, area: Int) {
+        var closestPoints = calculateClosestPoints()
+        var closestPointsPadded = calculateClosestPoints(padding: 10)
+        
+        var pointOfInterest: Point!
         var largestArea = 0
         for point in finitePoints() {
             let area = closestPoints.values.filter { $0 == point }.count
-            if area > largestArea { largestArea = area }
+            let areaWithPadding = closestPointsPadded.values.filter { $0 == point }.count
+            
+            if area == areaWithPadding && area > largestArea {
+                largestArea = area
+                pointOfInterest = point
+            }
         }
         
-        return largestArea
+        return (pointOfInterest, largestArea)
     }
     
 }
