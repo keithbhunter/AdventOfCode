@@ -127,4 +127,25 @@ class Day6 {
         return (pointOfInterest, largestArea)
     }
     
+    func calculateManhattanSum(of point: Point) -> Int {
+        return points.reduce(0, { $0 + $1.manhattanDistance(to: point) })
+    }
+    
+    func findPoints(withinDistance distance: Int) -> [Point] {
+        let box = boundingBox()
+        var points = [Point]()
+        
+        for x in box.min.x ... box.max.x {
+            for y in box.min.y ... box.max.y {
+                let pt = Point(x, y)
+                
+                if calculateManhattanSum(of: pt) < distance {
+                    points.append(pt)
+                }
+            }
+        }
+        
+        return points
+    }
+    
 }

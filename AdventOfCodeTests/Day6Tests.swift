@@ -62,4 +62,21 @@ class Day6Tests: XCTestCase {
         XCTAssertEqual(result.area, 4290)
     }
     
+    func testDay6Part2Example() {
+        let a = Point(1, 1)
+        let b = Point(1, 6)
+        let c = Point(8, 3)
+        let d = Point(3, 4)
+        let e = Point(5, 5)
+        let f = Point(8, 9)
+        
+        let points = Day6(input: [a, b, c, d, e, f]).findPoints(withinDistance: 32)
+        XCTAssertEqual(points.count, 16)
+    }
+    
+    func testDay6Part2() {
+        let points = Day6().findPoints(withinDistance: 10000)
+        XCTAssertEqual(points.count, 37318)
+    }
+    
 }
