@@ -18,6 +18,9 @@
 		E75514D821C0013C0094FEEE /* Day6Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75514D721C0013C0094FEEE /* Day6Tests.swift */; };
 		E75514DB21C0016D0094FEEE /* Day6.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75514DA21C0016D0094FEEE /* Day6.swift */; };
 		E75514DD21C011EC0094FEEE /* day6-input.txt in Resources */ = {isa = PBXBuildFile; fileRef = E75514DC21C011EC0094FEEE /* day6-input.txt */; };
+		E75514DF21C598510094FEEE /* Day7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75514DE21C598510094FEEE /* Day7Tests.swift */; };
+		E75514E221C5987E0094FEEE /* Day7.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75514E121C5987E0094FEEE /* Day7.swift */; };
+		E75514E421C5992F0094FEEE /* day7-input.txt in Resources */ = {isa = PBXBuildFile; fileRef = E75514E321C5992F0094FEEE /* day7-input.txt */; };
 		E7C97F3121B477540044A828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C97F3021B477540044A828 /* AppDelegate.swift */; };
 		E7C97F3321B477540044A828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C97F3221B477540044A828 /* ViewController.swift */; };
 		E7C97F3621B477540044A828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C97F3421B477540044A828 /* Main.storyboard */; };
@@ -66,6 +69,9 @@
 		E75514D721C0013C0094FEEE /* Day6Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6Tests.swift; sourceTree = "<group>"; };
 		E75514DA21C0016D0094FEEE /* Day6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
 		E75514DC21C011EC0094FEEE /* day6-input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "day6-input.txt"; sourceTree = "<group>"; };
+		E75514DE21C598510094FEEE /* Day7Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day7Tests.swift; sourceTree = "<group>"; };
+		E75514E121C5987E0094FEEE /* Day7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day7.swift; sourceTree = "<group>"; };
+		E75514E321C5992F0094FEEE /* day7-input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "day7-input.txt"; sourceTree = "<group>"; };
 		E7C97F2D21B477540044A828 /* AdventOfCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventOfCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C97F3021B477540044A828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7C97F3221B477540044A828 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +151,15 @@
 			path = Day6;
 			sourceTree = "<group>";
 		};
+		E75514E021C5986B0094FEEE /* Day7 */ = {
+			isa = PBXGroup;
+			children = (
+				E75514E321C5992F0094FEEE /* day7-input.txt */,
+				E75514E121C5987E0094FEEE /* Day7.swift */,
+			);
+			path = Day7;
+			sourceTree = "<group>";
+		};
 		E7C97F2421B477540044A828 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +189,7 @@
 				E719465521B75CE700F3DA4E /* Day4 */,
 				E75514D221BAE16A0094FEEE /* Day5 */,
 				E75514D921C0015F0094FEEE /* Day6 */,
+				E75514E021C5986B0094FEEE /* Day7 */,
 				E7C97F3021B477540044A828 /* AppDelegate.swift */,
 				E7C97F3221B477540044A828 /* ViewController.swift */,
 				E7C97F6821B5C1A60044A828 /* Bundle+AOC.swift */,
@@ -195,6 +211,7 @@
 				E719465821B75D1200F3DA4E /* Day4Tests.swift */,
 				E75514D021BAE02E0094FEEE /* Day5Tests.swift */,
 				E75514D721C0013C0094FEEE /* Day6Tests.swift */,
+				E75514DE21C598510094FEEE /* Day7Tests.swift */,
 			);
 			path = AdventOfCodeTests;
 			sourceTree = "<group>";
@@ -340,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E75514E421C5992F0094FEEE /* day7-input.txt in Resources */,
 				E719465721B75CFE00F3DA4E /* day4-input.txt in Resources */,
 				E7C97F7421B5D5FE0044A828 /* day3-input.txt in Resources */,
 				E7C97F3B21B477560044A828 /* LaunchScreen.storyboard in Resources */,
@@ -374,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E719465421B75CDD00F3DA4E /* Day4.swift in Sources */,
+				E75514E221C5987E0094FEEE /* Day7.swift in Sources */,
 				E75514DB21C0016D0094FEEE /* Day6.swift in Sources */,
 				E7C97F7621B5D6070044A828 /* Day3.swift in Sources */,
 				E75514D421BAE1790094FEEE /* Day5.swift in Sources */,
@@ -393,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7C97F6321B4BE470044A828 /* Day1Tests.swift in Sources */,
+				E75514DF21C598510094FEEE /* Day7Tests.swift in Sources */,
 				E7C97F6D21B5C2B50044A828 /* Day2Tests.swift in Sources */,
 				E7C97F7221B5D3360044A828 /* Day3Tests.swift in Sources */,
 				E75514D821C0013C0094FEEE /* Day6Tests.swift in Sources */,
