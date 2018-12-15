@@ -10,7 +10,13 @@ import Foundation
 
 class Day7 {
     
+    var numberOfWorkers: Int {
+        get { return queue.maxConcurrentOperationCount }
+        set { queue.maxConcurrentOperationCount = newValue }
+    }
+    
     private let steps: Set<Step>
+    private let queue = OperationQueue()
     
     init() {
         let str = Bundle.main.string(forTextResource: "day7-input")
@@ -43,6 +49,22 @@ class Day7 {
         }
         
         return order
+    }
+    
+    func determineInstructionOrder2(completion: @escaping () -> Void) {
+        let ops = steps.map { StepOperation(step: $0) }
+        for op in ops {
+            for dependency in op.step.dependencies {
+                op.addDependency(ops.first { $0.step == dependency }!)
+            }
+        }
+        ops.forEach { queue.addOperation($0) }
+        
+        let completeOp = BlockOperation {
+            completion()
+        }
+        ops.forEach { completeOp.addDependency($0) }
+        queue.addOperation(completeOp)
     }
     
 }
@@ -88,3 +110,53 @@ struct Step: Hashable {
     }
     
 }
+
+class StepOperation: AsyncOperation {
+    
+    static var executionDelay = 0.0
+    
+    let step: Step
+    
+    init(step: Step) {
+        self.step = step
+    }
+    
+    override func execute() {
+        let time = StepOperation.executionDelay + stepTimeTable[step.letter]!
+        
+        DispatchQueue.global().asyncAfter(deadline: .now() + time) {
+            print(self.step.letter)
+            self.finish()
+        }
+    }
+    
+}
+
+private let stepTimeTable: [Character : TimeInterval] = [
+    "A" : 1,
+    "B" : 2,
+    "C" : 3,
+    "D" : 4,
+    "E" : 5,
+    "F" : 6,
+    "G" : 7,
+    "H" : 8,
+    "I" : 9,
+    "J" : 10,
+    "K" : 11,
+    "L" : 12,
+    "M" : 13,
+    "N" : 14,
+    "O" : 15,
+    "P" : 16,
+    "Q" : 17,
+    "R" : 18,
+    "S" : 19,
+    "T" : 20,
+    "U" : 21,
+    "V" : 22,
+    "W" : 23,
+    "X" : 24,
+    "Y" : 25,
+    "Z" : 26,
+]

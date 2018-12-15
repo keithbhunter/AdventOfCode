@@ -21,6 +21,7 @@
 		E75514DF21C598510094FEEE /* Day7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75514DE21C598510094FEEE /* Day7Tests.swift */; };
 		E75514E221C5987E0094FEEE /* Day7.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75514E121C5987E0094FEEE /* Day7.swift */; };
 		E75514E421C5992F0094FEEE /* day7-input.txt in Resources */ = {isa = PBXBuildFile; fileRef = E75514E321C5992F0094FEEE /* day7-input.txt */; };
+		E75514E621C5A56E0094FEEE /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75514E521C5A56E0094FEEE /* AsyncOperation.swift */; };
 		E7C97F3121B477540044A828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C97F3021B477540044A828 /* AppDelegate.swift */; };
 		E7C97F3321B477540044A828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C97F3221B477540044A828 /* ViewController.swift */; };
 		E7C97F3621B477540044A828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C97F3421B477540044A828 /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 		E75514DE21C598510094FEEE /* Day7Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day7Tests.swift; sourceTree = "<group>"; };
 		E75514E121C5987E0094FEEE /* Day7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day7.swift; sourceTree = "<group>"; };
 		E75514E321C5992F0094FEEE /* day7-input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "day7-input.txt"; sourceTree = "<group>"; };
+		E75514E521C5A56E0094FEEE /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		E7C97F2D21B477540044A828 /* AdventOfCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventOfCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C97F3021B477540044A828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7C97F3221B477540044A828 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				E75514E021C5986B0094FEEE /* Day7 */,
 				E7C97F3021B477540044A828 /* AppDelegate.swift */,
 				E7C97F3221B477540044A828 /* ViewController.swift */,
+				E75514E521C5A56E0094FEEE /* AsyncOperation.swift */,
 				E7C97F6821B5C1A60044A828 /* Bundle+AOC.swift */,
 				E7C97F3421B477540044A828 /* Main.storyboard */,
 				E7C97F3721B477560044A828 /* Assets.xcassets */,
@@ -397,6 +400,7 @@
 				E7C97F7621B5D6070044A828 /* Day3.swift in Sources */,
 				E75514D421BAE1790094FEEE /* Day5.swift in Sources */,
 				E7C97F3321B477540044A828 /* ViewController.swift in Sources */,
+				E75514E621C5A56E0094FEEE /* AsyncOperation.swift in Sources */,
 				E7C97F6B21B5C23E0044A828 /* Day2.swift in Sources */,
 				E719465B21B75D2E00F3DA4E /* SecurityGuard.swift in Sources */,
 				E7C97F6121B477D40044A828 /* Day1.swift in Sources */,

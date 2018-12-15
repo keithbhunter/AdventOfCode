@@ -27,13 +27,51 @@ class Day7Tests: XCTestCase {
     }
 
     func testDay7Part1Example() {
-        let order = Day7(input: example).determineInstructionOrder()
+        let day7 = Day7(input: example)
+        day7.numberOfWorkers = 2
+        let order = day7.determineInstructionOrder()
         XCTAssertEqual(order, "CABDFE")
     }
     
     func testDay7Part1() {
         let order = Day7().determineInstructionOrder()
         XCTAssertEqual(order, "OKBNLPHCSVWAIRDGUZEFMXYTJQ")
+    }
+    
+    // Measure the time this test takes
+    func testDay7Part2Example() {
+        StepOperation.executionDelay = 0
+        let day7 = Day7(input: example)
+        day7.numberOfWorkers = 2
+        let exp = expectation(description: "testDay7Part1Example2")
+        
+        day7.determineInstructionOrder2() {
+            exp.fulfill()
+        }
+        
+        waitForExpectations(timeout: 30) { (error) in
+            if let error = error {
+                XCTFail("\(error)")
+            }
+        }
+    }
+    
+    // Measure the time this test takes
+    func testDay7Part2() {
+        StepOperation.executionDelay = 60
+        let day7 = Day7()
+        day7.numberOfWorkers = 5
+        let exp = expectation(description: "testDay7Part1Example2")
+        
+        day7.determineInstructionOrder2() {
+            exp.fulfill()
+        }
+        
+        waitForExpectations(timeout: 100000) { (error) in
+            if let error = error {
+                XCTFail("\(error)")
+            }
+        }
     }
 
 }
